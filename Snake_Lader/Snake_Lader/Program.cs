@@ -23,7 +23,8 @@ namespace Snake_Lader
                         playerOnePosition += 0;
                         break;
                     case LADDER:
-                        playerOnePosition += dieRoll;
+                        if ((playerOnePosition + dieRoll) <= 100)
+                            playerOnePosition += dieRoll;
                         break;
                     case SNAKE:
                         playerOnePosition -= dieRoll;
