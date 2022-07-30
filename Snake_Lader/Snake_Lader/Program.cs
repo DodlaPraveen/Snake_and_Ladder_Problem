@@ -12,10 +12,11 @@ namespace Snake_Lader
             Console.WriteLine("Welcome to Snake and Ladder Simulation(Single Player)");
             int playerOnePosition = 0;
             Random random = new Random();
-            int dieRoll;
+            int dieRoll, dieRollCount = 0;
             while (playerOnePosition < 100)
             {
                 dieRoll = random.Next(1, 7);
+                dieRollCount++;
                 int check = random.Next(1, 4);
                 switch (check)
                 {
@@ -34,6 +35,7 @@ namespace Snake_Lader
                 }
                 Console.WriteLine("Position of Player 1 is at " + playerOnePosition);
             }
+            Console.WriteLine("Dice rolled " + dieRollCount + " no of times to reach position 100");
         }
     }
 }
